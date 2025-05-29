@@ -17,7 +17,7 @@ const blogSchema :z.ZodSchema = z.object({
 
 // 为每个集合定义一个 `loader` 和 `schema`
 const blog = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.md', base: './src/blog' }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/blog" }),
   schema: blogSchema,
 });
 // 导出一个单独的 `collections` 对象用以注册你的集合（们）
